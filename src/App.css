@@ -182,3 +182,28 @@
     transition: transform 0.2s ease, filter 0.3s ease, box-shadow 0.3s ease;
     filter: drop-shadow(0px 0px 6px rgba(168, 85, 247, 0.6));
 }
+
+.delete-btn {
+    background: linear-gradient(135deg, #fb7070 0%, #fe0000 50%, #a855f7 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-weight: bold;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0px 0px 6px rgba(168, 85, 247, 0.6));
+}
+
+.delete-btn:active {
+    transform: scale(0.98);
+}
+
+.inventory_card {
+    background: rgb(40, 40, 40);
+    border-left: 5px;
+    border-right: 5px;
+    border-radius: 16px;
+    padding: 40px;
+}

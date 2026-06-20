@@ -23,13 +23,13 @@ const inventory =
     {
         name: "Poção do Arco Íro",
         description: "Traz felicidade momentânea. Pode durar de 10 minutos a 2 dias.",
-        img: "https://i.ibb.co/ZzS7xb2/rsz-sky.png",
+        img: "https://i.ibb.co/PrC09MP/rsz-2unicornio.png",
         price:120
-    },
+    },  
     {
         name: "Poção da Beleza Eterna",
         description: "Veneno que mata rápido.",
-        img: "https://i.ibb.co/PrC09MP/rsz-2unicornio.png",
+        img: "https://i.ibb.co/9p872NK/rsz-1beleza.png",
         price:100
     },
     {
