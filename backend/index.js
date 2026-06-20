@@ -2,6 +2,7 @@ import express from 'express'
 import routes from './src/routes/api.routes.js'
 import sequelize from './src/config/dbconfig.js'
 import cors from 'cors'
+import populate from './src/config/populate.js'
 
 const app = express();
 
@@ -11,6 +12,7 @@ async function startServer()
     app.use(express.json())
     app.use(express.urlencoded({extended: true}))
     app.use(cors())
+    await populate()
     app.use(routes)
     app.listen(3000, () => console.log('Servidor iniciado na porta 3000'))
 }

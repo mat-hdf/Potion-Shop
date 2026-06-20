@@ -11,6 +11,7 @@ import { GiStandingPotion } from 'react-icons/gi';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Historico from './historico'
 import Admin from './admin'
+import Products from './products'
 
 function App() {
 
@@ -36,6 +37,11 @@ function App() {
     if (currentScreen === 'admin') {
       return (
         <Admin />
+      )
+    }
+    if (currentScreen === 'produtos') {
+      return (
+        <Products />
       )
     }
   }

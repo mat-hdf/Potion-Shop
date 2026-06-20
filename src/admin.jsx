@@ -8,10 +8,44 @@ function Admin()
     const [description, setDescription] = useState('')
     const [img, setImg] = useState('')
     const [price, setPrice] = useState('')
+    const [created, wasCreated] = useState('')
 
-    function handleSubmit(e)
+    async function handleSubmit(e)
     {
         e.preventDefault()
+
+        const newPotion = {
+            name,
+            description,
+            img,
+            price
+        }
+
+        try {
+            
+            const response = await fetch('http://localhost:3000/potions',{
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json' // Avisa o backend que estamos enviando JSON
+                },
+                body: JSON.stringify(newPotion)
+            })
+
+            if (response.ok)
+            {
+                const data = await response.json()
+                console.log('Poção criada')
+                wasCreated('Poção criada com sucesso!')
+            }
+            else
+            {
+                console.log("Erro ao criar a poção")
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+
     }
 
     return (
@@ -75,6 +109,7 @@ function Admin()
                 <button type="submit" className="admin-btn">
                     Adicionar Poção
                 </button>
+                <p className='d-flex justify-content-center text-align-center mt-4' style={{ color: '#03E36F' }} >{created}</p>
             </form>
         </Container>
     )
